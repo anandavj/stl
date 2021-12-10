@@ -16,7 +16,6 @@ int main() {
     cout<<"\n";
 
     vector<int>::iterator vecItr;
-
     for (vecItr=vec.begin(); vecItr!=vec.end(); vecItr++) {
         cout<<*vecItr<<" ";
     }
