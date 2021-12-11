@@ -36,5 +36,25 @@ int main() {
 
     cout << endl << "=============" << "\n\n";
 
+    deque <int> deqFour;
+    deqFour.push_back(12);
+    deqFour.push_back(121);
+    deqFour.push_back(1);
+    deqFour.push_front(122);
+    deqFour.push_front(22);
+    deqFour.push_front(322);
+
+    for(auto it : deqFour) cout << it << " ";
+    cout<<endl;
+    deqFour.erase(deqFour.begin(), deqFour.end()-2);
+    for(auto it : deqFour) cout << it << " ";
+    cout<<endl;
+
+    cout << endl << "=============" << "\n\n";
+    deque <int> deqFive;
+    cout <<deqFive.empty()<<endl;
+    deqFive.push_back(12);
+    deqFive.pop_front();
+    cout <<deqFive.empty();
 
 }
