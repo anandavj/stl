@@ -57,4 +57,6 @@ int main() {
     deqFive.pop_front();
     cout <<deqFive.empty();
 
+    return 0;
+
 }

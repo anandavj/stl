@@ -24,4 +24,6 @@ int main() {
     for (auto vecRitr=vec.rbegin(); vecRitr!=vec.rend(); vecRitr++) {
         cout<<*vecRitr<<" ";
     }
+
+    return 0;
 }
