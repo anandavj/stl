@@ -28,7 +28,7 @@ int main() {
     cout<<endl;
     cout << *(deqThree.end()-1);
     cout<<endl;
-    cout << deqThree[2];
+    cout << deqThree[2] << " " << deqThree.at(2);
     cout<<endl;
     cout << *(deqThree.rbegin()+-1) << "||" << *(deqThree.end()) << endl;
     cout << (*(deqThree.rbegin()+-1) == *(deqThree.end()));
