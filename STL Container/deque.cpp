@@ -11,26 +11,32 @@ int main() {
     for(auto it : deq) cout << it << " ";
     cout<<endl;
     cout << deq.size() << "||" << deq.max_size();
-    cout<<endl;
+    cout<<endl<<endl;
 
     deque <int> deqTwo (500);
-    cout<< deqTwo.size() << "||" << deq.max_size() << endl;
-    deqTwo.resize(100);
-    cout<< deqTwo.size() << "||" << deq.max_size() << endl;
+    cout<< "DeqTwo size && Max Size:" << deqTwo.size() << "||" << deq.max_size() << endl;
+    deqTwo.resize(5);
+    cout<< "DeqTwo size && Max Size:" << deqTwo.size() << "||" << deq.max_size() << endl;
+    for(auto it : deqTwo) cout << it << " ";
+    deqTwo.push_front(1);
+    cout<<endl;
     deqTwo.shrink_to_fit();
-    cout<< deqTwo.size() << "||" << deq.max_size() << endl;
+    cout<< "DeqTwo size && Max Size:" << deqTwo.size() << "||" << deq.max_size() << endl;
+    for(auto it : deqTwo) cout << it << " ";
+    cout<<endl;
 
     cout << endl << "=============" << "\n\n";
 
     deque <int> deqThree;
     deqThree.assign(10,5);
+    cout<< "deqThree: ";
     for(auto it : deqThree) cout << it << " ";
     cout<<endl;
-    cout << *(deqThree.end()-1);
+    cout << "deqThree last element: " << *(deqThree.end()-1);
     cout<<endl;
     cout << deqThree[2] << " " << deqThree.at(2);
     cout<<endl;
-    cout << *(deqThree.rbegin()+-1) << "||" << *(deqThree.end()) << endl;
+    cout << "Memory of pointer after last element in deqThree: " << *(deqThree.rbegin()+-1) << "||" << *(deqThree.end()) << endl;
     cout << (*(deqThree.rbegin()+-1) == *(deqThree.end()));
     cout<<endl;
 
@@ -48,6 +54,8 @@ int main() {
     cout<<endl;
     deqFour.erase(deqFour.begin(), deqFour.end()-2);
     for(auto it : deqFour) cout << it << " ";
+    cout<<endl;
+    cout<<*deqFour.cbegin();
     cout<<endl;
 
     cout << endl << "=============" << "\n\n";
