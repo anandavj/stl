@@ -38,6 +38,12 @@ int main() {
     for(auto it:vec3) cout<< it << " ";
     cout<<endl;
 
+    cout << "vec: "; for_each(vec.begin(),vec.end(),[](int x) {cout<<x<<" ";}); cout<<endl;
+
+    vector<int> vec4{2,3,5};
+    auto searchRes = search(vec.begin(),vec.end(),vec4.begin(),vec4.end());
+    cout<<*searchRes;
+
     return 0;
 
 }
