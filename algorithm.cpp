@@ -40,9 +40,15 @@ int main() {
 
     cout << "vec: "; for_each(vec.begin(),vec.end(),[](int x) {cout<<x<<" ";}); cout<<endl;
 
-    vector<int> vec4{2,3,5};
+    vector<int> vec4{2,3,4};
     auto searchRes = search(vec.begin(),vec.end(),vec4.begin(),vec4.end());
-    cout<<*searchRes;
+    cout<<*searchRes<<endl;;
+
+    auto minmaxVal = minmax(vec.begin(),prev(vec.end()));
+    cout << "minimum val: " << *minmaxVal.first << " maximum val: " << *minmaxVal.second << endl;
+    remove_if(vec.begin(), vec.end(), [](int x) -> bool {return x%2!=0;}); // still not working(?)
+    cout<<"vec: ";
+    cout << "vec: "; for_each(vec.begin(),vec.end(),[](int x) {cout<<x<<" ";}); cout<<endl;
 
     return 0;
 
